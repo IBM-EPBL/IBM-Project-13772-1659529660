@@ -1,0 +1,27 @@
+				PROJECT IDEATION
+
+Ideas:-
+
+- Application can be made as a console application, which will be simpler and faster.
+- Since, prices are based on timelines and they change everytime according to various factors, Time series analysis can be used.
+- Datasets can be acquired from Kaggle.
+- Models that can be used,
+    Linear regression
+    Polynomical regression
+    Bayesian linear regression
+    Logistic regression
+    Lasso regression
+- Linear regression can be a simpler choice as it can yield a good result faster.
+- But as the result will be based on various factors, it is better to use polynomial regression.
+- To further expand the uses of this application, the application can be made as a web application.
+- The acquired results can be stored at the backend for reviewing the past variations in the prices of the crude oil.
+- MySQL can be used for storing the data.
+- As these datas can be very large and doesnt have a fixed structure, the ideal solution is to go for document DB's such as MongoDB.
+- Google Colab can be used for developing the regression model.
+- Data abtraction and encapsulation should be followed , so if in case the application need to be scaled to a larger one, it'll be easier to develop the new modules.
+
+Key points:-
+
+- Since, prices are based on timelines and they change everytime according to various factors, Time series analysis can be used.
+- But as the result will be based on various factors, it is better to use polynomial regression.
+- Application should be abstract.
