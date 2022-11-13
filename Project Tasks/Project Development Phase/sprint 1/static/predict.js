@@ -17,8 +17,8 @@ $(()=>{
             contentType : "application/json; charset=utf-8",
             data : getData(),
             type : "POST",
-            success : (result)=> postResult(result),
-            failure : (result) => postResult(result) 
+            success : result => postResult(result),
+            failure : result => postResult(result) 
         });
     });
 });
