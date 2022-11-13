@@ -2,7 +2,10 @@ $(()=>{
 
     const getData = () => {
         const jsonData = {};
-        jsonData.price = "hi";
+        jsonData.prices = [];
+        $("#predict-form").find("input").each(function(){
+            jsonData.prices.push(this.value);
+        });
         return JSON.stringify(jsonData);
     };
 

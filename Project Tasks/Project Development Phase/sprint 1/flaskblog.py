@@ -47,6 +47,9 @@ posts = [
     }
 ]
 
+#link model here and make prediction
+def getPrediction(prices):
+    pass
 
 @app.route("/")
 @app.route("/home")
@@ -56,7 +59,8 @@ def home():
 @app.route("/predict", methods=['POST'])
 def predict():
     data = request.get_json()
-    print(data)
+    prices = data["prices"]
+    getPrediction(prices)
     return "12345"
 
 @app.route("/about")
