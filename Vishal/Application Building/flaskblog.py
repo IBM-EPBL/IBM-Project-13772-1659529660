@@ -41,7 +41,7 @@ def home():
 @app.route("/predict", methods=['POST'])
 def predict():
     data = request.get_json()
-    prices =[int(i) for i in data["prices"]]
+    prices =[float(i) for i in data["prices"]]
     print(prices)
     print(getPrediction(prices))
     return str(getPrediction(prices))
