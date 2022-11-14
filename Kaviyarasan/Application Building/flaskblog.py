@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from tensorflow import keras
 import joblib
 import numpy as np
-import sklearn
+from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
 
 app = Flask(__name__)
@@ -17,7 +17,8 @@ posts = []
 
 #link model here and make prediction
 def getPrediction(prices):
-    sc = joblib.load("minmaxscaler.save")
+    look_back=10
+    sc = MinMaxScaler(feature_range=(0,1))
     regressor = keras.models.load_model('regressor.h5') 
     user_data=pd.DataFrame(prices,columns=['Prices'])
     sc_lst=sc.fit_transform(np.float64(user_data))
@@ -30,7 +31,7 @@ def getPrediction(prices):
     X_pred_values=np.reshape(X_pred_values,(X_pred_values.shape[0], 10, 1))
     Y_pred_values=regressor.predict(X_pred_values)
     Y_pred_values=sc.inverse_transform(Y_pred_values)
-    return Y_pred_values
+    return Y_pred_values[0][0]
 
 @app.route("/")
 @app.route("/home")
