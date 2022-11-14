@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+      <div class="content-section">
+        <h3>predict price</h3>
+        <p class='text'>Enter upto past 10 different crude oil prices.
+        </p>
+        <form id="predict-form">
+          price 1  :  <input type="number" >
+          <br>
+          price 2  :  <input type="text" >
+          <br>
+          price 3  :  <input type="text" >
+          <br>
+          price 4  :  <input type="text" >
+          <br>
+          price 5  :  <input type="text" >
+          <br>
+          price 6  :  <input type="text" >
+          <br>
+          price 7  :  <input type="text" >
+          <br>
+          price 8  :  <input type="text" >
+          <br>
+          price 9  :  <input type="text" >
+          <br>
+          price 10 : <input type="text" >
+          <br><br>
+        </form>
+        
+        <button id="submit" style="background-color: green;color:white;">predict price</button>
+        
+        <p></p>
+      </div>
+    
+{% endblock content %}
