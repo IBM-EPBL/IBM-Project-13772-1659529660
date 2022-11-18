@@ -1,1 +1,8 @@
-
+datetime
+flask
+flask_sqlalchemy
+tensorflow
+joblib
+numpy
+sklearn.preprocessing
+pandas
